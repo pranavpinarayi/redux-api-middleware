@@ -10,7 +10,7 @@ function apiMiddlewareCreator(client) {
       return next(action);
     }
 
-    next({ ...rest, type: `${type}` });
+    next({ ...rest, type: type });
     const actionPromise = promise(client);
 
     actionPromise
